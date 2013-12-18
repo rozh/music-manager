@@ -1,0 +1,10 @@
+--- !ruby/object:VR_ENV
+settings_file_version: 1
+width: 800
+height: 600
+panel_pos: 360
+run_command_line: ruby main.rb
+open_files: []
+open_folders: []
+current_file: ''
+rdoc_command_line: rdoc -x README
