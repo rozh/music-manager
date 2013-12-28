@@ -16,5 +16,8 @@ tmp
 .yardoc
 _yardoc
 doc/
+<<<<<<< HEAD
 
 info.json
+=======
+>>>>>>> origin/master
