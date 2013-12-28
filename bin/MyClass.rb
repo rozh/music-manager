@@ -1,15 +1,31 @@
+# -*- coding: utf-8 -*-
+require 'json'
 
 class MyClass #(change name)
 
-	include GladeGUI
+  include GladeGUI
 
-	def before_show()
-		@button1 = "Hello World"
-	end	
+  def before_show()
+    @builder["filechooserwidget1"].current_folder = RootDic.load
+  end
 
-	def button1__clicked(*args)
-		@builder["button1"].label = @builder["button1"].label == "Hello World" ? "Goodbye World" : "Hello World"
-	end
+  def button1__clicked(*args)
+    RootDic.save(@builder["filechooserwidget1"].current_folder)
+    Manager.dir_root = @builder["filechooserwidget1"].current_folder
+    Manager.update_db
+  end
+
+  def destroy(widget, event)
+    if event.state.control_mask? && event.keyval == Gdk::Keyval::GDK_q
+      destroy
+      true
+    else
+      false
+    end
+  end
+
+  def destroy_window
+    Gtk.main_quit
+  end
 
 end
-
