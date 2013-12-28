@@ -1,5 +1,4 @@
 music-manager
-<<<<<<< HEAD
 ==========
 music-manager can create list of your music files.
 
@@ -25,8 +24,3 @@ You can run this to install it
 You can this command and you can run music-manager
 
     ruby main.rb
-=======
-=============
-
-create list for your music files
->>>>>>> origin/master
