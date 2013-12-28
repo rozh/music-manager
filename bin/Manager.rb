@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 require 'csv'
-require 'pp'
 require 'find'
 require 'mp3info'
 require 'taglib'
