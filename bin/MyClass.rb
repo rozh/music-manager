@@ -17,7 +17,7 @@ class MyClass #(change name)
 
   def destroy(widget, event)
     if event.state.control_mask? && event.keyval == Gdk::Keyval::GDK_q
-      destroy
+      destroy_window
       true
     else
       false
